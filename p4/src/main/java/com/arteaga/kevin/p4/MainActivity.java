@@ -35,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
     TextView t6;
     TextView t7;
     TextView t8;
-    String loggin, con1,con2,con3,correo,sex,ciudad;
-    String[] ciudades = { "Ninguna", "Barranquilla", "Bogota",
-            "Bucaramanga", "Cali", "Medellín",
-            "Montería", "Sincelejo", "Pereira"};
-
-    int mus,dep,via,com, dia, mes, año;
+    TextView t9;
+    TextView t10;
+    TextView t11;
+    TextView t12;
+    TextView t13;
+    String loggin, con1,con2,con3,correo,sex,ciudad,mus,dep,via,com;
+    String[] ciudades = { "Ninguna", "Barranquilla", "Bógota", "Bucaramanga", "Cali", "Medellín", "Montería", "Sincelejo", "Pereira"};
+    int dia, mes, año;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +67,27 @@ public class MainActivity extends AppCompatActivity {
         t6=(TextView)findViewById(R.id.tSex);
         t7=(TextView)findViewById(R.id.tFecha);
         t8=(TextView)findViewById(R.id.tCiudad);
+        t9=(TextView)findViewById(R.id.tMus);
+        t10=(TextView)findViewById(R.id.tDep);
+        t11=(TextView)findViewById(R.id.tVia);
+        t12=(TextView)findViewById(R.id.tCom);
+        t13=(TextView)findViewById(R.id.tTittle);
         Spinner spciudades = (Spinner) findViewById (R.id.sCiudad);
 
         ArrayAdapter<String> a_ciudades = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, ciudades);
 
         spciudades.setAdapter(a_ciudades);
+        spciudades.setOnItemSelectedListener(new SpinnerListener());
+    }
+
+    public class SpinnerListener implements AdapterView.OnItemSelectedListener {
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+            ciudad = parent.getItemAtPosition(pos).toString();
+        }
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
     }
 
     public void onRadioClick(View v){
@@ -107,38 +124,31 @@ public class MainActivity extends AppCompatActivity {
             dia = fecha.getDayOfMonth();
             mes = fecha.getMonth() + 1;
             año = fecha.getYear();
-            public class SpinnerListener implements AdapterView.OnItemSelectedListener {
-
-                // Metodo onItemSelected en el que indicamos lo que queremos hacer
-                // cuando sea seleccionado un elemento del Spinner
-                public void onItemSelected(AdapterView<?> parent,View view, int pos, long id) {
-                    ciudad= parent.getItemAtPosition(pos).toString();
-                }
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            }
-        }
             if (musica.isChecked()){
-                mus=1;
+                mus="Música";
             }
             if (deporte.isChecked()){
-                dep=1;
+                dep="Deporte";
             }
             if (viajes.isChecked()){
-                via=1;
+                via="Viajes";
             }
             if (compras.isChecked()){
-                com=1;
+                com="Compras";
             }
             t1.setText("Loggin: "+loggin);
             t2.setText("Password 1: "+con1);
-            t3.setText("Pssword 2: "+con2);
+            t3.setText("Password 2: "+con2);
             t4.setText("E-mail: "+correo);
             t5.setText("Password:"+con3);
             t6.setText("Sexo: "+sex);
             t7.setText("Fecha Nacimiento: Día: "+dia+" Mes: "+mes+" Año: "+año);
             t8.setText("Lugar Nacimiento: "+ciudad);
+            t13.setText("Hobbies:");
+            t9.setText(mus);
+            t10.setText(dep);
+            t11.setText(via);
+            t12.setText(com);
 
 
         }
