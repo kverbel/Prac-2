@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">P2</string>
+    <string name="num1">Número 1</string>
+    <string name="num2">Número 2</string>
+    <string name="resultado">Resultado</string>
+    <string name="resta">Resta</string>
+    <string name="suma">Suma</string>
+    <string name="multiplicacion">Multiplicación</string>
+    <string name="division">División</string>
+    <string name="calcular">Calcular</string>
+</resources>

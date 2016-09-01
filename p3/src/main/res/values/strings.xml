@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Calculadora de áreas</string>
+    <string name="cuadro">Cuadrado</string>
+    <string name="triangulo">Triángulo</string>
+    <string name="rectangulo">Rectángulo</string>
+    <string name="circulo">Círculo</string>
+    <string name="calcular">Calcular</string>
+    <string name="lado">Lado(cms)</string>
+    <string name="base">Base(cms)</string>
+    <string name="altura">Altura(cms)</string>
+    <string name="radio">Radio(cms)</string>
+    <string name="area">Área: </string>
+    <string name="error1">"Ingresa el valor correctamente."</string>
+    <string name="error2">"Ingresa correctamente los valores."</string>
+    <string name="pregunta">A que figura desea calcularle el área:</string>
+
+</resources>

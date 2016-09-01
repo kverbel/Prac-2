@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayCiudades">
+        <item>Ninguna</item>
+        <item>Barranquilla</item>
+        <item>Bógota</item>
+        <item>Bucaramanga</item>
+        <item>Cartagena</item>
+        <item>Manizales</item>
+        <item>Medellín</item>
+        <item>Montería</item>
+        <item>Pereira</item>
+    </string-array>
+</resources>
